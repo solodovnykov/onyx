@@ -1,0 +1,138 @@
+// reset
+@import "./Reset.module.scss";
+
+// constants
+@import "./Constants.module.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "SFProText";
+  font-weight: 400;
+  background-color: $main-color;
+  color: $main-text-color;
+  overflow-x: hidden;
+
+  &::after {
+    content: "";
+    width: 200vw;
+    height: 220vh;
+    background-image: url("/grain.png");
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    z-index: 1000;
+    background-repeat: repeat;
+    
+    pointer-events: none;
+    animation: grain 1.5s steps(6) infinite;
+    overflow: hidden;
+    opacity: .2;
+  }
+}
+
+@keyframes grain {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  30% {
+    transform: translate(-3%, -15%);
+  }
+  50% {
+    transform: translate(-12%, 9%);
+  }
+  70% {
+    transform: translate(-9%, 4%);
+  }
+  90% {
+    transform: translate(-1%, 7%);
+  }
+}
+
+// fonts
+@font-face {
+  font-family: "SFProText";
+  src: url("../fonts/SF-Pro-Text-Light.otf");
+  sc: local("SF-Pro-Text-Light"), local("SF-Pro-Text-Light"),
+    url("../fonts/SF-Pro-Text-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFProText";
+  src: url("../fonts/SF-Pro-Text-Regular.otf");
+  sc: local("SF-Pro-Text-Regular"), local("SF-Pro-Text-Regular"),
+    url("../fonts/SF-Pro-Text-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFProText";
+  src: url("../fonts/SF-Pro-Text-Medium.otf");
+  sc: local("SF-Pro-Text-Medium"), local("SF-Pro-Text-Medium"),
+    url("../fonts/SF-Pro-Text-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Bold.ttf");
+  sc: local("SF-Pro-Text-Medium"), local("Gilroy-Bold"),
+    url("../fonts/Gilroy-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+// containers
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.container-max {
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.container-global {
+  max-width: 2000px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+  width: 10px;
+  background: $main-color;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #dedede2e;
+  opacity: 0.2;
+  transition: all 0.2s ease-in-out;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #dedede2f;
+  opacity: 0.3;
+  transition: all 0.2s ease-in-out;
+}
