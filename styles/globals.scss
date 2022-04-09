@@ -14,6 +14,7 @@ body {
   background-color: $main-color;
   color: $main-text-color;
   overflow-x: hidden;
+  font-smooth: always;
 
   &::after {
     content: "";

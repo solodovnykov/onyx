@@ -8,9 +8,42 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="ru">
         <Head>
           <link rel="manifest" href="/manifest.json" />
+          <meta
+            name="description"
+            content="Onyx — ванильный сервер по Майнкрафт, который ты так долго искал. Никаких приватов и  телепортов, всё как в одиночной игре."
+          />
+          <meta
+            name="keywords"
+            content="Майнкрафт,  ванильный сервер, сервер майнкратф, minecraft, minecraft server, лицензионный сервер майнкрафт, onyx"
+          />
+          <meta name="robots" content="index, follow" />
+          <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+          <meta name="language" content="Russian" />
+          <meta name="reply-to" content="solodovnikov.toni@gmail.com" />
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon-32x32.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png"
+          />
+
+          <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#161617" />
+          <meta name="msapplication-TileColor" content="#161617" />
+          <meta name="theme-color" content="#161617" />
         </Head>
         <body>
           <Main />

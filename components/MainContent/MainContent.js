@@ -3,8 +3,9 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import { useContext } from "react";
 import { NotificationContext } from "../Notifications/NotificationProvider";
 import { v4 } from "uuid";
+import parse from "html-react-parser";
 
-const MainContent = () => {
+const MainContent = ({ props }) => {
   const dispatch = useContext(NotificationContext);
   const copyIpHandler = () => {
     dispatch({
@@ -19,12 +20,8 @@ const MainContent = () => {
   return (
     <div className="container">
       <div className={styles.content}>
-        <h1 className={styles.mainText}>
-          Майнкрафт просто <br /> и со вкусом
-        </h1>
-        <h2 className={styles.secondText}>
-          Сервер, который создан игроками <br /> для игроков
-        </h2>
+        <h1 className={styles.mainText}>{parse(props.fields.mainText)}</h1>
+        <h2 className={styles.secondText}>{parse(props.fields.secondText)}</h2>
         <div className={styles.btnWrapper}>
           <CopyToClipboard text="play.onyxmc.xyz">
             <div onClick={copyIpHandler} className={styles.btnCopyIp}>

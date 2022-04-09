@@ -25,7 +25,6 @@ const NotificationProvider = (props) => {
   // }
 
   if (typeof window !== "undefined") {
-    console.log(window.innerWidth);
     widnowWidth = window.innerWidth <= 1350 ? styles.mobile : styles.desktop;
   }
 

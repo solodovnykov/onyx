@@ -104,6 +104,10 @@
       offset-rotate: 0deg;
       offset-anchor: left bottom;
 
+      @media (max-width: 500px) {
+        display: none;
+      }
+
       p {
         font-family: "SFProText";
         font-style: normal;

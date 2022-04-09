@@ -37,7 +37,8 @@ const Header = () => {
               href="https://discord.gg/PksMvGT4qg"
               target="_blank"
               rel="noreferrer"
-              className={styles.discordIcon}>
+              className={styles.discordIcon}
+              aria-label="Discord">
               <svg
                 width="30"
                 height="30"
@@ -54,7 +55,8 @@ const Header = () => {
               href="https://vk.com/onyxmcserver"
               target="_blank"
               rel="noreferrer"
-              className={styles.vkIcon}>
+              className={styles.vkIcon}
+              aria-label="Vk">
               <svg
                 width="30"
                 height="30"
